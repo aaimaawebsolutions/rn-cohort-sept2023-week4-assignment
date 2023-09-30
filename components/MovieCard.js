@@ -8,16 +8,21 @@ const MovieCard = ({ poster, onPress }) => (
     activeOpacity={1}
   >
     <Card style={styles.card}>
-      <Card.Cover source={{ uri: poster }} />
+      <Card.Cover style={styles.cover} source={{ uri: poster }} />
     </Card>
   </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
   card: {
+    borderRadius: 10,
     width: 120,
     height: 190,
     marginLeft: 8,
+  },
+  cover: {
+    height: 190,
+    borderRadius:4,
   },
 });
 

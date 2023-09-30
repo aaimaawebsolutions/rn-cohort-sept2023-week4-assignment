@@ -1,8 +1,10 @@
-
+import { Dimensions } from 'react-native';
 import React from 'react';
 import { View, StyleSheet,Image } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {Text,Button} from 'react-native-paper';
+
+
 
 const CarouselItem = ({ item }) => {
   return (
@@ -19,18 +21,18 @@ const CarouselComponent = ({ data }) => {
   const renderItem = ({ item }) => (
     <CarouselItem item={item} />
   );
-
+  const windowWidth = Dimensions.get('window').width;
   return (
     <View style={{alignContent : 'center', alignItems:'center',backgroundColor:'black'}}>
       <Carousel
         data={data}
         renderItem={renderItem}
-        sliderWidth={300}
-        itemWidth={300}
+        sliderWidth={windowWidth}
+        itemWidth={360}
         layout="default"
         loop={true}
         autoplay={true}
-        autoplayInterval={6000}
+        autoplayInterval={4000}
         onSnapToItem={(index) => setActiveSlide(index)}
       />
       <Pagination
@@ -51,6 +53,7 @@ const styles = StyleSheet.create({
     borderRadius: 9,
     padding: 20,
     alignItems: 'center',
+    flex: 1,
   },
   image: {
     width: 400,
@@ -59,6 +62,19 @@ const styles = StyleSheet.create({
   slideText: {
     marginBottom: 10,
     color:'white',
+  },
+  paginationContainer: {
+    paddingVertical: 10, 
+    paddingHorizontal: 20, 
+    flexDirection: 'row', 
+    justifyContent: 'center', 
+  },
+  paginationDot: {
+    width: 8,        
+    height: 8,       
+    borderRadius: 4,  
+    marginHorizontal: 4, 
+    backgroundColor: 'white', 
   },
 });
 
