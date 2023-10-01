@@ -1,5 +1,5 @@
 import {ScrollView } from 'react-native';
-import MovieCard from '../components/MovieCard';
+import MovieCard1 from '../components/MovieCard1';
 
 export default function PopularMovies(){
     const popularmovies = [
@@ -22,7 +22,7 @@ export default function PopularMovies(){
     return(
         <ScrollView horizontal>
             {popularmovies.map((movie, index) => (
-              <MovieCard
+              <MovieCard1
                 key={index}
                 poster={movie.poster}
                 onPress={() => handlePopularMoviePress(movie)} // Handle click event
