@@ -8,13 +8,12 @@ const TopRatedApi = async () => {
     const response = await axios.get(API_URL, {
       params: {
         api_key: API_KEY,
-        page: 1, // You can adjust the page number if needed
+        page: 1, 
       },
     });
 
-    // Check if the request was successful
     if (response.status === 200) {
-      const top10Movies = response.data.results.slice(0, 15); // Get the top 10 movies
+      const top10Movies = response.data.results.slice(0, 15);
       return top10Movies;
     } else {
       throw new Error('Failed to fetch data');

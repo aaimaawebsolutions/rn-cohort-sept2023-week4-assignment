@@ -16,7 +16,7 @@ const UpcomingMovies = () => {
         const movies = await UpcomingApi();
         setTopMovies(movies);
       } catch (error) {
-        // Handle error if needed
+        // Handle error
       }
     };
 

@@ -15,7 +15,7 @@ const TopRatedMovies = () => {
         const movies = await TopRatedApi();
         setTopMovies(movies);
       } catch (error) {
-        // Handle error if needed
+        // Handle error 
       }
     };
 

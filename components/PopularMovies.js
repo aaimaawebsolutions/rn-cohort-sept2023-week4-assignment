@@ -17,7 +17,6 @@ export default function PopularMovies(){
         },
     ];
     const handlePopularMoviePress = (movie) => {
-    // when user clikcs on card
     };
     return(
         <ScrollView horizontal>
@@ -25,7 +24,7 @@ export default function PopularMovies(){
               <MovieCard1
                 key={index}
                 poster={movie.poster}
-                onPress={() => handlePopularMoviePress(movie)} // Handle click event
+                onPress={() => handlePopularMoviePress(movie)} 
               />
             ))}
         </ScrollView>
