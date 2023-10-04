@@ -35,7 +35,6 @@ const DrawerNavigator = ({ showHomePage }) => {
         name="LocationsStack"
         component={LocationsStackNavigator}
       />
-      <Drawer.Screen name="DarkMode" component={LocationsStackNavigator} />
     </Drawer.Navigator>
   );
 };
