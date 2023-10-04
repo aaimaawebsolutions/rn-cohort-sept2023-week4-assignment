@@ -147,4 +147,4 @@ function AppNavigator() {
   );
 }
 
-export default Home;
+export default AppNavigator;

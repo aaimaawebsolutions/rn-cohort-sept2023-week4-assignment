@@ -7,15 +7,18 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 
 import styles from "./styles";
 import { COLORS } from "../../constants/theme";
 import { StatusBar } from "expo-status-bar";
 import { Home } from "../../navigator/AppNavigator";
+import AppContext from "../../context/HomeContext";
 
-const signInScreen = ({ navigation, setIsShowHome }) => {
-  <StatusBar style="light" />;
+const signInScreen = ({ navigation }) => {
+  const { setShowHomePage } = useContext(AppContext);
+
+  // <StatusBar style="light" />;
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -44,7 +47,7 @@ const signInScreen = ({ navigation, setIsShowHome }) => {
             />
           </View>
           <View style={styles.btnContainer}>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => setShowHomePage(true)}>
               <View style={styles.button1}>
                 <Text style={styles.btnText}>SIGN IN</Text>
               </View>

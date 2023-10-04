@@ -9,6 +9,8 @@ import AppNavigator from "./src/navigator/AppNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import DrawerNavigator from "./src/navigator/DrawerNavigator";
 import HomeStackNavigator from "./src/screens/HomeStackNavigator";
+import { HomwContextProvider } from "./src/context/HomeContext";
+import AllNavigation from "./src/navigator/AllNavigation";
 
 const slides = [
   {
@@ -35,7 +37,7 @@ const slides = [
 ];
 
 export default function App() {
-  const [showHomePage, setShowHomePage] = useState(false);
+  const [showWelcomPage, setShowWelcomPage] = useState(true);
 
   const buttonLabel = (label) => {
     return (
@@ -57,7 +59,7 @@ export default function App() {
     );
   };
 
-  if (!showHomePage) {
+  if (showWelcomPage) {
     return (
       <AppIntroSlider
         data={slides}
@@ -102,16 +104,15 @@ export default function App() {
         renderSkipButton={() => buttonLabel("Skip")}
         renderDoneButton={() => buttonLabel("Done")}
         onDone={() => {
-          setShowHomePage(true);
+          setShowWelcomPage(false);
         }}
       />
     );
   }
 
   return (
-    <NavigationContainer>
-      <DrawerNavigator />
-    </NavigationContainer>
-    // <AppNavigator />
+    <HomwContextProvider>
+      <AllNavigation />
+    </HomwContextProvider>
   );
 }

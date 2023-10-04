@@ -16,7 +16,7 @@ import { COLORS } from "../constants/theme";
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = () => {
+const DrawerNavigator = ({ showHomePage }) => {
   return (
     <Drawer.Navigator
       screenOptions={{
@@ -35,6 +35,7 @@ const DrawerNavigator = () => {
         name="LocationsStack"
         component={LocationsStackNavigator}
       />
+      <Drawer.Screen name="DarkMode" component={LocationsStackNavigator} />
     </Drawer.Navigator>
   );
 };
