@@ -35,6 +35,12 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     paddingTop: 20,
+    flex: 1,
+  },
+
+  text: {
+    color: "white",
+    fontSize: 18,
   },
   title: {
     fontWeight: "bold",

@@ -1,16 +1,12 @@
 import "react-native-gesture-handler";
-import { AppRegistry, Platform } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import AppIntroSlider from "react-native-app-intro-slider";
 import { COLORS, SIZES } from "./src/constants/theme";
-import AppNavigator from "./src/navigator/AppNavigator";
-import { NavigationContainer } from "@react-navigation/native";
-import DrawerNavigator from "./src/navigator/DrawerNavigator";
-import HomeStackNavigator from "./src/screens/HomeStackNavigator";
 import { HomwContextProvider } from "./src/context/HomeContext";
 import AllNavigation from "./src/navigator/AllNavigation";
+import { DarkModeProvider } from "./src/context/DarkModeContext";
 
 const slides = [
   {
@@ -111,8 +107,10 @@ export default function App() {
   }
 
   return (
-    <HomwContextProvider>
-      <AllNavigation />
-    </HomwContextProvider>
+    <DarkModeProvider>
+      <HomwContextProvider>
+        <AllNavigation />
+      </HomwContextProvider>
+    </DarkModeProvider>
   );
 }

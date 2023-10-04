@@ -14,6 +14,7 @@ import Favourites from "../screens/Favourites";
 import Account from "../screens/Account";
 import Cart from "../screens/Cart";
 import { COLORS } from "../constants/theme";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Tab = createBottomTabNavigator();
