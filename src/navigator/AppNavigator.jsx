@@ -17,103 +17,103 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function Home() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Find Best Restuarants"
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
+// function Home() {
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator
+//         initialRouteName="Find Best Restuarants"
+//         screenOptions={({ route }) => ({
+//           tabBarIcon: ({ focused, color, size }) => {
+//             let iconName;
 
-            // You can return any component that you like here!
-            // return <Ionicons name={iconName} />;
-          },
-          // tabBarActiveTintColor: "tomato",
-          // tabBarInactiveTintColor: "gray",
-        })}
-      >
-        <Tab.Screen
-          name="History"
-          component={History}
-          options={{
-            tabBarLabel: "History",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="history"
-                color={color}
-                size={size}
-              />
-            ),
-            headerStyle: {
-              backgroundColor: COLORS.primary,
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Favourites"
-          component={Favourites}
-          options={{
-            tabBarLabel: "Favourites",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="cards-heart-outline"
-                color={color}
-                size={size}
-              />
-            ),
-            headerStyle: {
-              backgroundColor: COLORS.primary,
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Find Best Restuarants"
-          component={HomeScreen}
-          options={{
-            tabBarLabel: "Home",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="home" color={color} size={size} />
-            ),
-            headerStyle: {
-              backgroundColor: COLORS.primary,
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Account"
-          component={Account}
-          options={{
-            tabBarLabel: "account",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="account-heart-outline"
-                color={color}
-                size={size}
-              />
-            ),
-            headerStyle: {
-              backgroundColor: COLORS.primary,
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Cart"
-          component={Cart}
-          options={{
-            tabBarLabel: "cart",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="cart" color={color} size={size} />
-            ),
-            headerStyle: {
-              backgroundColor: COLORS.primary,
-            },
-          }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
+//             // You can return any component that you like here!
+//             // return <Ionicons name={iconName} />;
+//           },
+//           // tabBarActiveTintColor: "tomato",
+//           // tabBarInactiveTintColor: "gray",
+//         })}
+//       >
+//         <Tab.Screen
+//           name="History"
+//           component={History}
+//           options={{
+//             tabBarLabel: "History",
+//             tabBarIcon: ({ color, size }) => (
+//               <MaterialCommunityIcons
+//                 name="history"
+//                 color={color}
+//                 size={size}
+//               />
+//             ),
+//             headerStyle: {
+//               backgroundColor: COLORS.primary,
+//             },
+//           }}
+//         />
+//         <Tab.Screen
+//           name="Favourites"
+//           component={Favourites}
+//           options={{
+//             tabBarLabel: "Favourites",
+//             tabBarIcon: ({ color, size }) => (
+//               <MaterialCommunityIcons
+//                 name="cards-heart-outline"
+//                 color={color}
+//                 size={size}
+//               />
+//             ),
+//             headerStyle: {
+//               backgroundColor: COLORS.primary,
+//             },
+//           }}
+//         />
+//         <Tab.Screen
+//           name="Find Best Restuarants"
+//           component={HomeScreen}
+//           options={{
+//             tabBarLabel: "Home",
+//             tabBarIcon: ({ color, size }) => (
+//               <MaterialCommunityIcons name="home" color={color} size={size} />
+//             ),
+//             headerStyle: {
+//               backgroundColor: COLORS.primary,
+//             },
+//           }}
+//         />
+//         <Tab.Screen
+//           name="Account"
+//           component={Account}
+//           options={{
+//             tabBarLabel: "account",
+//             tabBarIcon: ({ color, size }) => (
+//               <MaterialCommunityIcons
+//                 name="account-heart-outline"
+//                 color={color}
+//                 size={size}
+//               />
+//             ),
+//             headerStyle: {
+//               backgroundColor: COLORS.primary,
+//             },
+//           }}
+//         />
+//         <Tab.Screen
+//           name="Cart"
+//           component={Cart}
+//           options={{
+//             tabBarLabel: "cart",
+//             tabBarIcon: ({ color, size }) => (
+//               <MaterialCommunityIcons name="cart" color={color} size={size} />
+//             ),
+//             headerStyle: {
+//               backgroundColor: COLORS.primary,
+//             },
+//           }}
+//         />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+//   );
+// }
 
 function AppNavigator() {
   return (

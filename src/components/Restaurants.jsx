@@ -8,8 +8,10 @@ import {
 } from "react-native";
 import React from "react";
 import { COLORS, SIZES } from "../constants/theme";
+import { useTheme } from "../context/ThemeProvider";
 
 const restuarants = ({ title, data }) => {
+  // const { theme } = useTheme();
   return (
     <View style={styles.container}>
       <View style={styles.row}>

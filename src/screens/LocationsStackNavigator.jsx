@@ -5,7 +5,13 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
 
 const Locations = () => (
-  <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+  <View
+    style={{
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
     <Text>Locations screen!</Text>
   </View>
 );
@@ -29,7 +35,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "black",
   },
   text: {
     color: "white",

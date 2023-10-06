@@ -7,6 +7,7 @@ import { COLORS, SIZES } from "./src/constants/theme";
 import { HomwContextProvider } from "./src/context/HomeContext";
 import AllNavigation from "./src/navigator/AllNavigation";
 import { DarkModeProvider } from "./src/context/DarkModeContext";
+import { ThemeProvider } from "./src/context/ThemeProvider";
 
 const slides = [
   {
@@ -107,10 +108,12 @@ export default function App() {
   }
 
   return (
-    <DarkModeProvider>
-      <HomwContextProvider>
-        <AllNavigation />
-      </HomwContextProvider>
-    </DarkModeProvider>
+    <ThemeProvider>
+      <DarkModeProvider>
+        <HomwContextProvider>
+          <AllNavigation />
+        </HomwContextProvider>
+      </DarkModeProvider>
+    </ThemeProvider>
   );
 }
