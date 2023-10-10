@@ -1,7 +1,12 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "expo-avv",
     "slug": "expo-avv",
+=======
+    "name": "Hotstar",
+    "slug": "Hotstar",
+>>>>>>> origin/Samarth/week-4-assignment
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,6 +22,7 @@
     "ios": {
       "supportsTablet": true
     },
+<<<<<<< HEAD
     "plugins": [
       [
         "expo-screen-orientation",
@@ -32,6 +38,14 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.samsaxx.expoavv"
+=======
+    "android": {
+      "permissions": ["CAMERA_ROLL", "RECORD_AUDIO", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+>>>>>>> origin/Samarth/week-4-assignment
     },
     "web": {
       "favicon": "./assets/favicon.png"
